@@ -33,7 +33,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.tctCreditAdded = new System.Windows.Forms.TextBox();
+            this.txtCreditAdded = new System.Windows.Forms.TextBox();
             this.txtOneParkNoCard = new System.Windows.Forms.TextBox();
             this.txtOneParkWithCard = new System.Windows.Forms.TextBox();
             this.btnCalculate = new System.Windows.Forms.Button();
@@ -45,7 +45,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(80, 41);
+            this.label1.Location = new System.Drawing.Point(86, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(145, 13);
             this.label1.TabIndex = 0;
@@ -54,7 +54,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(83, 83);
+            this.label2.Location = new System.Drawing.Point(86, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(169, 13);
             this.label2.TabIndex = 1;
@@ -63,7 +63,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(86, 128);
+            this.label3.Location = new System.Drawing.Point(86, 127);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(154, 13);
             this.label3.TabIndex = 2;
@@ -72,7 +72,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(89, 247);
+            this.label4.Location = new System.Drawing.Point(86, 253);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(131, 13);
             this.label4.TabIndex = 3;
@@ -81,18 +81,18 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(92, 300);
+            this.label5.Location = new System.Drawing.Point(86, 307);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "Credit remaining";
             // 
-            // tctCreditAdded
+            // txtCreditAdded
             // 
-            this.tctCreditAdded.Location = new System.Drawing.Point(380, 33);
-            this.tctCreditAdded.Name = "tctCreditAdded";
-            this.tctCreditAdded.Size = new System.Drawing.Size(100, 20);
-            this.tctCreditAdded.TabIndex = 5;
+            this.txtCreditAdded.Location = new System.Drawing.Point(380, 33);
+            this.txtCreditAdded.Name = "txtCreditAdded";
+            this.txtCreditAdded.Size = new System.Drawing.Size(100, 20);
+            this.txtCreditAdded.TabIndex = 5;
             // 
             // txtOneParkNoCard
             // 
@@ -112,16 +112,17 @@
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(380, 247);
+            this.btnCalculate.Location = new System.Drawing.Point(380, 173);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(75, 23);
             this.btnCalculate.TabIndex = 8;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // txtDaysParking
             // 
-            this.txtDaysParking.Location = new System.Drawing.Point(380, 297);
+            this.txtDaysParking.Location = new System.Drawing.Point(380, 246);
             this.txtDaysParking.Name = "txtDaysParking";
             this.txtDaysParking.ReadOnly = true;
             this.txtDaysParking.Size = new System.Drawing.Size(100, 20);
@@ -129,7 +130,7 @@
             // 
             // txtCreditRemaining
             // 
-            this.txtCreditRemaining.Location = new System.Drawing.Point(386, 353);
+            this.txtCreditRemaining.Location = new System.Drawing.Point(380, 300);
             this.txtCreditRemaining.Name = "txtCreditRemaining";
             this.txtCreditRemaining.ReadOnly = true;
             this.txtCreditRemaining.Size = new System.Drawing.Size(100, 20);
@@ -137,12 +138,13 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(380, 415);
+            this.btnExit.Location = new System.Drawing.Point(380, 382);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 11;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Form1
             // 
@@ -155,7 +157,7 @@
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.txtOneParkWithCard);
             this.Controls.Add(this.txtOneParkNoCard);
-            this.Controls.Add(this.tctCreditAdded);
+            this.Controls.Add(this.txtCreditAdded);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -175,7 +177,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox tctCreditAdded;
+        private System.Windows.Forms.TextBox txtCreditAdded;
         private System.Windows.Forms.TextBox txtOneParkNoCard;
         private System.Windows.Forms.TextBox txtOneParkWithCard;
         private System.Windows.Forms.Button btnCalculate;
