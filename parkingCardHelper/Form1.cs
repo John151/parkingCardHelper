@@ -28,14 +28,31 @@ namespace parkingCardHelper
              * for an amount of credit added to a campus card */
 
             bool creditValid = Double.TryParse(txtCreditAdded.Text, out double creditAdded); //Inline variable 
-            bool costOneParkWithCardValid = Double.TryParse(txtOneParkWithCard.txt, out double costOneParkWithCard);
+            bool costOneParkWithCardValid = Double.TryParse(txtOneParkWithCard.Text, out double costOneParkWithCard);
 
             if (creditValid && costOneParkWithCardValid) //checks to see if both are True
             {
                 //calculate number of times user can park and how much if any credit is left over
                 int daysParking = (int)(creditAdded / costOneParkWithCard);
                 double creditRemaining = creditAdded % costOneParkWithCard;
-                    }
+
+                txtDaysParking.Text = daysParking.ToString();  //setting txtdaysparking to string
+                txtCreditRemaining.Text = creditRemaining.ToString("c");
+            }
+            else
+            { MessageBox.Show("please enter numbers", "Error");
+            }
+        }
+
+        private void txtSavings_TextChanged(object sender, EventArgs e)
+        {
+            bool daysParkingValid = Double.TryParse(txtDaysParking.Text, out double daysParking);
+                
+                )
+            double txtSavings = int daysParking * double(txtOneParkNoCard - txtOneParkWithCard);
+            txtSavings.Text = txtSavings.ToString("c");
+            
+
         }
     }
 }

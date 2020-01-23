@@ -40,6 +40,8 @@
             this.txtDaysParking = new System.Windows.Forms.TextBox();
             this.txtCreditRemaining = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtSavings = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -138,7 +140,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(380, 382);
+            this.btnExit.Location = new System.Drawing.Point(556, 396);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 11;
@@ -146,11 +148,31 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(89, 355);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(45, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Savings";
+            // 
+            // txtSavings
+            // 
+            this.txtSavings.Location = new System.Drawing.Point(380, 365);
+            this.txtSavings.Name = "txtSavings";
+            this.txtSavings.ReadOnly = true;
+            this.txtSavings.Size = new System.Drawing.Size(100, 20);
+            this.txtSavings.TabIndex = 13;
+            this.txtSavings.TextChanged += new System.EventHandler(this.txtSavings_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtSavings);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txtCreditRemaining);
             this.Controls.Add(this.txtDaysParking);
@@ -184,6 +206,8 @@
         private System.Windows.Forms.TextBox txtDaysParking;
         private System.Windows.Forms.TextBox txtCreditRemaining;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtSavings;
     }
 }
 
