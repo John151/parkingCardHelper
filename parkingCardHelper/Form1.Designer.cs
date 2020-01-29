@@ -95,6 +95,7 @@
             this.txtCreditAdded.Name = "txtCreditAdded";
             this.txtCreditAdded.Size = new System.Drawing.Size(100, 20);
             this.txtCreditAdded.TabIndex = 5;
+            this.txtCreditAdded.TextChanged += new System.EventHandler(this.txtCreditAdded_TextChanged);
             // 
             // txtOneParkNoCard
             // 
@@ -103,6 +104,7 @@
             this.txtOneParkNoCard.Size = new System.Drawing.Size(100, 20);
             this.txtOneParkNoCard.TabIndex = 6;
             this.txtOneParkNoCard.Text = "5";
+            this.txtOneParkNoCard.TextChanged += new System.EventHandler(this.txtOneParkNoCard_TextChanged);
             // 
             // txtOneParkWithCard
             // 
@@ -137,6 +139,7 @@
             this.txtCreditRemaining.ReadOnly = true;
             this.txtCreditRemaining.Size = new System.Drawing.Size(100, 20);
             this.txtCreditRemaining.TabIndex = 10;
+            this.txtCreditRemaining.TextChanged += new System.EventHandler(this.txtCreditRemaining_TextChanged);
             // 
             // btnExit
             // 
@@ -159,7 +162,7 @@
             // 
             // txtSavings
             // 
-            this.txtSavings.Location = new System.Drawing.Point(380, 365);
+            this.txtSavings.Location = new System.Drawing.Point(380, 348);
             this.txtSavings.Name = "txtSavings";
             this.txtSavings.ReadOnly = true;
             this.txtSavings.Size = new System.Drawing.Size(100, 20);

@@ -19,6 +19,7 @@ namespace parkingCardHelper
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            this.Close();
 
         }
 
@@ -29,15 +30,22 @@ namespace parkingCardHelper
 
             bool creditValid = Double.TryParse(txtCreditAdded.Text, out double creditAdded); //Inline variable 
             bool costOneParkWithCardValid = Double.TryParse(txtOneParkWithCard.Text, out double costOneParkWithCard);
+            bool costOneParkWithoutCardValid = Double.TryParse(txtOneParkNoCard.Text, out double costOneParkNoCard);
 
-            if (creditValid && costOneParkWithCardValid) //checks to see if both are True
+
+            if (creditValid && costOneParkWithCardValid && costOneParkWithoutCardValid) //checks to see if all are True
             {
                 //calculate number of times user can park and how much if any credit is left over
                 int daysParking = (int)(creditAdded / costOneParkWithCard);
                 double creditRemaining = creditAdded % costOneParkWithCard;
+                //calculates total savings
+                double savings = daysParking * (costOneParkNoCard - costOneParkWithCard);
 
                 txtDaysParking.Text = daysParking.ToString();  //setting txtdaysparking to string
                 txtCreditRemaining.Text = creditRemaining.ToString("c");
+                txtSavings.Text = savings.ToString();
+
+
             }
             else
             { MessageBox.Show("please enter numbers", "Error");
@@ -46,12 +54,21 @@ namespace parkingCardHelper
 
         private void txtSavings_TextChanged(object sender, EventArgs e)
         {
-            bool daysParkingValid = Double.TryParse(txtDaysParking.Text, out double daysParking);
-                
-                )
-            double txtSavings = int daysParking * double(txtOneParkNoCard - txtOneParkWithCard);
-            txtSavings.Text = txtSavings.ToString("c");
-            
+
+        }
+
+        private void txtOneParkNoCard_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCreditRemaining_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCreditAdded_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
